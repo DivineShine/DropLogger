@@ -1,3 +1,4 @@
+//Opens Log File
 private void RexOpenLogActionPerformed(java.awt.event.ActionEvent evt) {                                           
         Desktop dk = Desktop.getDesktop();
         try {
@@ -6,7 +7,7 @@ private void RexOpenLogActionPerformed(java.awt.event.ActionEvent evt) {
             Logger.getLogger(DropLogger.class.getName()).log(Level.SEVERE, null, ex);
         }
     }                                          
-
+//Adds Dragon Axe to Rex File
     private void RexDragonAxeActionPerformed(java.awt.event.ActionEvent evt) {                                             
         try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(rex_file_name, true)))) {
             out.println("1 x Dragon Axe");
@@ -15,7 +16,7 @@ private void RexOpenLogActionPerformed(java.awt.event.ActionEvent evt) {
         }
         confirmDisplay.setText("Added drop: 1 x Dragon Axe");
     }                                            
-
+//Adds Berserker Ring to Rex File
     private void RexBerserkerRingActionPerformed(java.awt.event.ActionEvent evt) {                                                 
         try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(rex_file_name, true)))) {
             out.println("1 x Berserker Ring");
@@ -24,7 +25,7 @@ private void RexOpenLogActionPerformed(java.awt.event.ActionEvent evt) {
         }
         confirmDisplay.setText("Added drop: 1 x Berserker Ring");
     }                                                
-
+//User Selects Rex File Path
     private void RexFilePathActionPerformed(java.awt.event.ActionEvent evt) {                                            
         FileFilter ft = new FileNameExtensionFilter("Text Files", "txt");
         db.addChoosableFileFilter(ft);
